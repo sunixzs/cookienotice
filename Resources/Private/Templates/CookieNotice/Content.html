@@ -1,0 +1,15 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+<f:spaceless>
+	<div class="cookie-notice">
+		<div class="page-centered">
+			<span class="header">{f:translate(key:'header')}</span>
+			<span class="content-wrap">
+				<span class="content">{f:translate(key:'content_before_link')}<f:link.page pageUid="{settings.read_more_pid}" additionalParams="{L:sys_language_uid}" class="iframe" target="_blank">{f:translate(key:'content_link')}</f:link.page>{f:translate(key:'content_after_link')}</span>
+				<span id="cookie-notice-confirmed">{f:translate(key:'content_confirm')}</span>
+			</span>
+		</div>
+	</div>
+</f:spaceless>
+</f:section>

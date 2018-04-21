@@ -1,0 +1,25 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+	<div id="cookie-notice-wrap"></div>
+	<script>
+	requirejs(["{f:uri.resource(path:'Javascript/CookieNotice.min.js')}"], function (CookieNotice) {
+		var config = <f:format.raw>{</f:format.raw>
+			uriContent: 'index.php?eID=CookieNotice&L={sys_language_uid}&vendorName=MAB&extensionName=Cookienotice&pluginName=Pi1&controllerName=CookieNotice&actionName=content&formatName=html',
+			uriStyles: '{f:uri.resource(path:"Stylesheets/styles.css")}',
+			cookieName: "{cookieName}",
+			cookieLifetime: {cookieLifetime},
+			container: document.querySelector("#cookie-notice-wrap"),
+			buttonQuerySelector: '#cookie-notice-confirmed',
+			onContentLoaded: function (that) {
+				document.querySelector("body").style.marginBottom = document.querySelector("#cookie-notice-wrap").clientHeight + "px";
+			},
+			onButtonClicked: function (that) {
+				document.querySelector("body").style.marginBottom = null;
+			}
+		<f:format.raw>}</f:format.raw>;
+		
+		var CN = new CookieNotice(config);
+	});
+	</script>
+</f:section>

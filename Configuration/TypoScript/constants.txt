@@ -1,0 +1,21 @@
+plugin.tx_cookienotice {
+	view {
+		# cat=plugin.tx_cookienotice/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:_cookie_notice/Resources/Private/Templates/
+		# cat=plugin.tx_cookienotice/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:_cookie_notice/Resources/Private/Partials/
+		# cat=plugin.tx_cookienotice/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:_cookie_notice/Resources/Private/Layouts/
+	}
+	
+	settings {
+		# Pid of the link in the notice
+		read_more_pid = 1
+		
+		# Name
+		cookieName = _cookie_notice
+		
+		# Lifetime of a cookie in days
+		cookieLifetime = 365
+	}
+}

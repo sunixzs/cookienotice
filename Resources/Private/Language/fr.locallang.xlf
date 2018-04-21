@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2016-02-09T10:57:00Z" product-name="cookie_notice">
+		<header/>
+		<body>
+			<trans-unit id="header">
+				<target>Note de cookie:</target>
+			</trans-unit>
+			<trans-unit id="content_before_link">
+				<target><![CDATA[Ce domaine utilise des cookies pour vous assurer un meilleur service. En utilisant notre site, vous acceptez notre politique de ]]></target>
+			</trans-unit>
+			<trans-unit id="content_link">
+				<target>cookies et de confidentialité</target>
+			</trans-unit>
+			<trans-unit id="content_after_link">
+				<target><![CDATA[.]]></target>
+			</trans-unit>
+			<trans-unit id="content_confirm">
+				<target>OK</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

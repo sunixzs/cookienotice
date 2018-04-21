@@ -1,0 +1,32 @@
+plugin.tx_cookienotice {
+	view {
+		templateRootPaths.0 = {$plugin.tx_cookienotice.view.templateRootPath}
+		templateRootPath = {$plugin.tx_cookienotice.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_cookienotice.view.partialRootPath}
+		partialRootPath = {$plugin.tx_cookienotice.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_cookienotice.view.layoutRootPath}
+		layoutRootPath = {$plugin.tx_cookienotice.view.layoutRootPath}
+	}
+	
+	settings {
+		read_more_pid = {$plugin.tx_cookienotice.settings.read_more_pid}
+		cookieName = {$plugin.tx_cookienotice.settings.cookieName}
+		cookieLifetime = {$plugin.tx_cookienotice.settings.cookieLifetime}	 
+	}
+}
+
+# integrate the notice at the bottom of the page
+page.9999 = USER
+page.9999 {
+	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+	extensionName = Cookienotice
+	pluginName = Pi1
+	vendorName = MAB
+	controller = CookieNotice
+	switchableControllerActions {
+		CookieNotice {
+			1 = integration
+		}
+	}
+	settings < plugin.tx_cookienotice.settings
+}
